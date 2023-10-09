@@ -1,23 +1,54 @@
+/* SearchBar.module.css */
 
+/* Container styles */
 .container {
-    margin: 20px;
     text-align: center;
+    margin: 20px;
   }
   
-  /* Style for the input field */
+  /* Input styles */
   .input {
+    padding: 10px;
     width: 300px;
-    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 16px;
   }
   
-  /* Style for the search button */
+  /* Button styles */
   .button {
-    padding: 8px 16px;
-    font-size: 16px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Wishlist button styles */
+  .wishlistButton {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .wishlistButton:hover {
+    background-color: #1e7e34;
+  }
+  
+  /* Active Wishlist button styles */
+  .activeWishlist {
+    background-color: red;
   }
   
