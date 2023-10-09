@@ -1,6 +1,4 @@
-/* SearchBar.module.css */
 
-/* Container styles */
 .container {
     display: flex;
     flex-direction: column;
@@ -8,6 +6,10 @@
     padding: 20px;
     border: 1px solid #ccc;
     margin: 20px;
+    background-image: url('https://cdn.corporatefinanceinstitute.com/assets/consumer-products.jpg'); 
+    background-size: cover; 
+     
+    background-position: center; 
   }
   
   /* Input styles */
