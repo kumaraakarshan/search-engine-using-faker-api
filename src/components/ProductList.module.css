@@ -1,0 +1,17 @@
+/* ProductList.css */
+
+/* Style for the product list container */
+.container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Style for individual product items */
+  .item {
+    list-style: none;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
