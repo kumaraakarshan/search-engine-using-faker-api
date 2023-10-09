@@ -2,53 +2,68 @@
 
 /* Container styles */
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
     margin: 20px;
   }
   
   /* Input styles */
   .input {
+    width: 50%;
     padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    margin-bottom: 10px;
   }
   
   /* Button styles */
   .button {
-    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 10px;
+    padding: 10px 20px;
   }
   
-  .button:hover {
-    background-color: #0056b3;
+  /* Product list styles */
+  .productList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Product item styles */
+  .productItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
   }
   
   /* Wishlist button styles */
   .wishlistButton {
-    padding: 5px 10px;
-    background-color: #28a745;
+    background-color: #f44336;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    margin-left: 10px;
+    padding: 5px 10px;
+    display: none; /* Initially hidden */
   }
   
-  .wishlistButton:hover {
-    background-color: #1e7e34;
+  /* Show the Wishlist button on hover */
+  .productItem:hover .wishlistButton {
+    display: inline-block;
   }
   
   /* Active Wishlist button styles */
   .activeWishlist {
-    background-color: red;
+    background-color: #f00;
   }
   

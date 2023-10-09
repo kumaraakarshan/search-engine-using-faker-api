@@ -52,11 +52,11 @@ function SearchBar() {
       {showProducts && (
         <div>
           {products.length > 0 ? (
-            <ul>
+            <ul className={styles.productList}>
               {products
                 .filter((product) => product.name.toLowerCase().includes(filter.toLowerCase()))
                 .map((product) => (
-                  <li key={product.id}>
+                  <li key={product.id} className={styles.productItem}>
                     {product.name}
                     <button
                       className={`${styles.wishlistButton} ${
