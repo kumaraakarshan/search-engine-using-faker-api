@@ -6,7 +6,7 @@ function SearchBar() {
   const [filter, setFilter] = useState('');
   const [products, setProducts] = useState([]);
   const [showProducts, setShowProducts] = useState(false);
-  const [wishlist, setWishlist] = useState([]); // State for wishlist
+  const [wishlist, setWishlist] = useState([]);
 
   const handleSearch = () => {
     axios
@@ -20,13 +20,11 @@ function SearchBar() {
       });
   };
 
-  // Function to add or remove products from the wishlist
   const toggleWishlist = (productId) => {
     if (wishlist.includes(productId)) {
-      // Remove from wishlist
+    
       setWishlist(wishlist.filter((id) => id !== productId));
     } else {
-      // Add to wishlist
       setWishlist([...wishlist, productId]);
     }
   };
