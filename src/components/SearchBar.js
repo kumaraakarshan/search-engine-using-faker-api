@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import styles from './SearchBar.module.css';
 
@@ -8,7 +8,7 @@ function SearchBar() {
   const [showProducts, setShowProducts] = useState(false);
   const [wishlist, setWishlist] = useState([]);
 
-  const handleSearch = () => {
+  const handleSearch = useCallback(() => {
     axios
       .get(`https://fakerapi.it/api/v1/products?_locale=en_US&_seed=12345&_quantity=50&name=${filter}`)
       .then((response) => {
@@ -18,7 +18,7 @@ function SearchBar() {
       .catch((error) => {
         console.error(error);
       });
-  };
+  }, [filter]);
 
   const toggleWishlist = (productId) => {
     if (wishlist.includes(productId)) {
@@ -33,8 +33,7 @@ function SearchBar() {
     if (showProducts) {
       handleSearch();
     }
-  }, [showProducts, handleSearch]); 
-  
+  }, [showProducts, handleSearch]);
 
   return (
     <div className={styles.container}>
