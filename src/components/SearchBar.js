@@ -33,7 +33,8 @@ function SearchBar() {
     if (showProducts) {
       handleSearch();
     }
-  }, [showProducts]);
+  }, [showProducts, handleSearch]); 
+  
 
   return (
     <div className={styles.container}>
